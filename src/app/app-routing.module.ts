@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 //import { RouterModule, Routes } from '@angular/router';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { PagesComponent } from './pages/pages.component';
 //import { PagesComponent } from './pages/pages.component';
 const routes: Routes = [
   {
     path: 'dd',
-    component: AppComponent,
+    component: PagesComponent,
     //canActivate: [LoginGuard, VerifyTokenGuard],
     runGuardsAndResolvers: 'always',
     children: [
 
       {
         path: 'principal',
-        component: AppComponent,
+        component: PagesComponent,
         data: { showRootComponents: true },
       }
     ],
