@@ -84,6 +84,7 @@ export class ServiciosService {
     queryParams = queryParams.append('usuario',usuario);
     queryParams = queryParams.append('password',password);
     let url = `${environment.urlValidarLogin}`;
+    console.log('ruta: ',url);
     return this.http.post(url,'',{params : queryParams}).pipe(
     tap((result:any)=> (this.login = result)),
     map((result:any)=> result)

@@ -57,7 +57,7 @@ export class GestionLoginComponent implements OnInit{
         console.log('entra incorrecto', error);
         this.formLogin.reset();
         localStorage.clear();
-        Swal.fire({icon: 'error', title: error.error.status, text: error.error.msn});
+        Swal.fire({icon: 'error', title: error.status, text: error.error == null ? 'Error en la solicitud' : error.statusText});
       }
     );
   }
