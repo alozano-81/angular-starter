@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { ServiciosService } from 'src/app/services/servicios.service';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
@@ -34,7 +33,6 @@ export class GestionLoginComponent implements OnInit{
     config: NgbModalConfig*/
 
     public router : Router,
-    public toastr : ToastrService
     )
     {
       //config.backdrop = 'static';

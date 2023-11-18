@@ -32,14 +32,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { TemplateComponent } from './components/template/template.component';
 
 import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 @NgModule({
   declarations: [
-    TemplateComponent,
     PagesComponent,
     GestionLoginComponent
     //SpinerComponent
@@ -81,6 +79,6 @@ import { PagesComponent } from './pages.component';
     MatDatepickerModule,
     MatToolbarModule
   ],
-  exports: [TemplateComponent],
+  exports: [],
 })
 export class PagesModule {}
