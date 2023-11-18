@@ -1,9 +1,12 @@
-import { NgModule, OnInit } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import Swal from 'sweetalert2';
+import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PagesModule } from './pages/pages.module';
+
 
 @NgModule({
   declarations: [
@@ -11,15 +14,17 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PagesModule,
+    AppRoutingModule
+
   ],
-  providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [
+    appRoutingProviders,
+    { provide : APP_BASE_HREF, useValue: '/gestion'}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule implements OnInit {
-
-  ngOnInit():void {
-    Swal.fire({icon: 'error', title: 'funciona'});
-  }
-
+export class AppModule {
  }
